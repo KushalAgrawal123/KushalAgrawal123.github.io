@@ -3,13 +3,11 @@
 
   var root = document.documentElement;
   var themeBtn = document.getElementById('theme-toggle');
-  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function currentTheme() {
     var theme = root.getAttribute('data-theme');
-    if (theme === 'light' || theme === 'dark') return theme;
-    return darkQuery.matches ? 'dark' : 'light';
+    return theme === 'dark' ? 'dark' : 'light';
   }
 
   function syncThemeButton() {
@@ -27,7 +25,6 @@
       syncThemeButton();
     });
     syncThemeButton();
-    darkQuery.addEventListener('change', syncThemeButton);
   }
 
   /* Use the reading position so short sections and gaps stay predictable. */

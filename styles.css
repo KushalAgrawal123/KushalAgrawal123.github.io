@@ -23,27 +23,6 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0c1422;
-    --surface: #101c2d;
-    --surface-hover: #17263b;
-    --text: #e6edf7;
-    --text-2: #a8b7cc;
-    --muted: #94a5be;
-    --border: #243248;
-    --border-strong: #3b4e69;
-    --accent: #adc7ff;
-    --link: #adc7ff;
-    --accent-soft: #1c2f4c;
-    --on-accent: #101c2d;
-    --tag-bg: #162338;
-    --green: #6cdda3;
-    --shadow: 0 6px 24px -16px rgb(0 0 0 / 45%);
-    color-scheme: dark;
-  }
-}
-
 :root[data-theme="dark"] {
   --bg: #0c1422;
   --surface: #101c2d;
@@ -185,10 +164,6 @@ strong { font-weight: 600; color: var(--text); }
 .ico-sun { display: none; }
 :root[data-theme="dark"] .ico-sun { display: block; }
 :root[data-theme="dark"] .ico-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .ico-sun { display: block; }
-  :root:not([data-theme="light"]) .ico-moon { display: none; }
-}
 .mobile-nav { display: none; }
 
 /* Reading column and introduction */
